@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="title">Timer & Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="mode-selector">
+            <button class="mode-btn" data-mode="stopwatch" data-lang="stopwatch">碼表</button>
+            <button class="mode-btn" data-mode="timer" data-lang="timer">計時器</button>
+        </div>
+
+        <h1 class="mode-title" data-lang="stopwatch">碼表</h1>
+
+        <div class="timer-settings">
+            <button class="duration-btn" data-duration="60000" data-lang="duration-1m">1 分鐘</button>
+            <button class="duration-btn" data-duration="300000" data-lang="duration-5m">5 分鐘</button>
+            <button class="duration-btn" data-duration="600000" data-lang="duration-10m">10 分鐘</button>
+            <div class="custom-duration">
+                <select id="custom-hours">
+                    <option value="0">0 時</option>
+                    <option value="1">1 時</option>
+                    <option value="2">2 時</option>
+                    <option value="3">3 時</option>
+                    <option value="4">4 時</option>
+                    <option value="5">5 時</option>
+                    <option value="6">6 時</option>
+                    <option value="7">7 時</option>
+                    <option value="8">8 時</option>
+                    <option value="9">9 時</option>
+                    <option value="10">10 時</option>
+                    <option value="11">11 時</option>
+                    <option value="12">12 時</option>
+                    <option value="13">13 時</option>
+                    <option value="14">14 時</option>
+                    <option value="15">15 時</option>
+                    <option value="16">16 時</option>
+                    <option value="17">17 時</option>
+                    <option value="18">18 時</option>
+                    <option value="19">19 時</option>
+                    <option value="20">20 時</option>
+                    <option value="21">21 時</option>
+                    <option value="22">22 時</option>
+                    <option value="23">23 時</option>
+                </select>
+                <select id="custom-minutes">
+                    <option value="0">0 分</option>
+                    <option value="1">1 分</option>
+                    <option value="2">2 分</option>
+                    <option value="3">3 分</option>
+                    <option value="4">4 分</option>
+                    <option value="5">5 分</option>
+                    <option value="6">6 分</option>
+                    <option value="7">7 分</option>
+                    <option value="8">8 分</option>
+                    <option value="9">9 分</option>
+                    <option value="10">10 分</option>
+                    <option value="11">11 分</option>
+                    <option value="12">12 分</option>
+                    <option value="13">13 分</option>
+                    <option value="14">14 分</option>
+                    <option value="15">15 分</option>
+                    <option value="16">16 分</option>
+                    <option value="17">17 分</option>
+                    <option value="18">18 分</option>
+                    <option value="19">19 分</option>
+                    <option value="20">20 分</option>
+                    <option value="21">21 分</option>
+                    <option value="22">22 分</option>
+                    <option value="23">23 分</option>
+                    <option value="24">24 分</option>
+                    <option value="25">25 分</option>
+                    <option value="26">26 分</option>
+                    <option value="27">27 分</option>
+                    <option value="28">28 分</option>
+                    <option value="29">29 分</option>
+                    <option value="30">30 分</option>
+                    <option value="31">31 分</option>
+                    <option value="32">32 分</option>
+                    <option value="33">33 分</option>
+                    <option value="34">34 分</option>
+                    <option value="35">35 分</option>
+                    <option value="36">36 分</option>
+                    <option value="37">37 分</option>
+                    <option value="38">38 分</option>
+                    <option value="39">39 分</option>
+                    <option value="40">40 分</option>
+                    <option value="41">41 分</option>
+                    <option value="42">42 分</option>
+                    <option value="43">43 分</option>
+                    <option value="44">44 分</option>
+                    <option value="45">45 分</option>
+                    <option value="46">46 分</option>
+                    <option value="47">47 分</option>
+                    <option value="48">48 分</option>
+                    <option value="49">49 分</option>
+                    <option value="50">50 分</option>
+                    <option value="51">51 分</option>
+                    <option value="52">52 分</option>
+                    <option value="53">53 分</option>
+                    <option value="54">54 分</option>
+                    <option value="55">55 分</option>
+                    <option value="56">56 分</option>
+                    <option value="57">57 分</option>
+                    <option value="58">58 分</option>
+                    <option value="59">59 分</option>
+                    <option value="60">60 分</option>
+                </select>
+                <select id="custom-seconds">
+                    <option value="0">0 秒</option>
+                    <option value="1">1 秒</option>
+                    <option value="2">2 秒</option>
+                    <option value="3">3 秒</option>
+                    <option value="4">4 秒</option>
+                    <option value="5">5 秒</option>
+                    <option value="6">6 秒</option>
+                    <option value="7">7 秒</option>
+                    <option value="8">8 秒</option>
+                    <option value="9">9 秒</option>
+                    <option value="10">10 秒</option>
+                    <option value="11">11 秒</option>
+                    <option value="12">12 秒</option>
+                    <option value="13">13 秒</option>
+                    <option value="14">14 秒</option>
+                    <option value="15">15 秒</option>
+                    <option value="16">16 秒</option>
+                    <option value="17">17 秒</option>
+                    <option value="18">18 秒</option>
+                    <option value="19">19 秒</option>
+                    <option value="20">20 秒</option>
+                    <option value="21">21 秒</option>
+                    <option value="22">22 秒</option>
+                    <option value="23">23 秒</option>
+                    <option value="24">24 秒</option>
+                    <option value="25">25 秒</option>
+                    <option value="26">26 秒</option>
+                    <option value="27">27 秒</option>
+                    <option value="28">28 秒</option>
+                    <option value="29">29 秒</option>
+                    <option value="30">30 秒</option>
+                    <option value="31">31 秒</option>
+                    <option value="32">32 秒</option>
+                    <option value="33">33 秒</option>
+                    <option value="34">34 秒</option>
+                    <option value="35">35 秒</option>
+                    <option value="36">36 秒</option>
+                    <option value="37">37 秒</option>
+                    <option value="38">38 秒</option>
+                    <option value="39">39 秒</option>
+                    <option value="40">40 秒</option>
+                    <option value="41">41 秒</option>
+                    <option value="42">42 秒</option>
+                    <option value="43">43 秒</option>
+                    <option value="44">44 秒</option>
+                    <option value="45">45 秒</option>
+                    <option value="46">46 秒</option>
+                    <option value="47">47 秒</option>
+                    <option value="48">48 秒</option>
+                    <option value="49">49 秒</option>
+                    <option value="50">50 秒</option>
+                    <option value="51">51 秒</option>
+                    <option value="52">52 秒</option>
+                    <option value="53">53 秒</option>
+                    <option value="54">54 秒</option>
+                    <option value="55">55 秒</option>
+                    <option value="56">56 秒</option>
+                    <option value="57">57 秒</option>
+                    <option value="58">58 秒</option>
+                    <option value="59">59 秒</option>
+                    <option value="60">60 秒</option>
+                </select>
+                <button class="set-custom-btn" data-lang="set">設定</button>
+            </div>
+        </div>
+
+        <div class="display">00:00.00</div>
+
+        <div class="buttons">
+            <button class="control-btn" data-action="start" data-lang="start">開始</button>
+            <button class="control-btn" data-action="pause" data-lang="pause" disabled>暫停</button>
+            <button class="control-btn" data-action="reset" data-lang="reset">重置</button>
+            <button class="control-btn" data-action="lap" data-lang="lap" disabled>分圈</button>
+        </div>
+
+        <div class="laps">
+            <h3 data-lang="laps">分圈時間</h3>
+            <div class="laps-list"></div>
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.timer-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+    margin: 10px; /* 增加邊距，避免貼邊 */
+}
+
+.mode-selector {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mode-selector .mode-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #e9e9e9;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1.1em; /* 按鈕文字稍大 */
+}
+
+.mode-selector .mode-btn.active {
+    background: #4CAF50;
+    color: white;
+}
+
+.mode-title {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.timer-settings {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.timer-settings .duration-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.timer-settings .duration-btn:hover {
+    background: #e1e1e1;
+}
+
+.custom-duration {
+    display: flex;
+    gap: 5px;
+    flex: 3;
+    align-items: center;
+}
+
+.custom-duration select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 30%;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.custom-duration .set-custom-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.custom-duration .set-custom-btn:hover {
+    background: #e1e1e1;
+}
+
+.display {
+    font-size: 3em;
+    margin: 30px 0;
+    font-family: monospace;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.buttons .control-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.buttons .control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.buttons .control-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.laps {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.laps h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.laps-list {
+    display: flex;
+    flex-direction: column-reverse; /* 最新分圈顯示在頂部 */
+}
+
+.lap-item {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    font-family: monospace;
+}
+
+.lap-item:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 手機版 RWD 優化 */
+@media (max-width: 500px) {
+    .timer-container {
+        width: 90%;
+        padding: 15px;
+        margin: 10px auto; /* 確保居中 */
+    }
+
+    .mode-selector .mode-btn {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .mode-title {
+        font-size: 1.3em;
+    }
+
+    .display {
+        font-size: 2em; /* 縮小時間顯示 */
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .timer-settings {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .timer-settings .duration-btn {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .custom-duration {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .custom-duration select {
+        width: 30%; /* 每個選單占 30% */
+        font-size: 0.9em;
+        padding: 6px;
+    }
+
+    .custom-duration .set-custom-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons .control-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1em; /* 按鈕文字稍大 */
+        min-width: unset; /* 移除最小寬度 */
+    }
+
+    .laps {
+        max-height: 150px; /* 縮短分圈區域 */
+    }
+
+    .laps h3 {
+        font-size: 1em;
+    }
+
+    .lap-item {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+}
