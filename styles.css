@@ -1,6 +1,5 @@
 /* 引入 Google Fonts - Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
     font-family: 'Roboto', Arial, sans-serif; /* 使用 Roboto 字體，備用 Arial */
     display: flex;
@@ -8,11 +7,9 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: url('https://i.ibb.co/0jWhJ0fD/2024-07-26-12-23-IMG-6504.jpg') no-repeat center center fixed; /* 使用新圖片背景 */
-    background-size: cover; /* 覆蓋整個螢幕 */
+    background: #2d2d2d; /* 深灰背景 */
     color: #ffffff; /* 白字 */
 }
-
 .timer-container {
     background: rgba(30, 30, 40, 0.95); /* 深灰半透明背景，與圖片對比 */
     padding: 25px;
