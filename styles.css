@@ -14,7 +14,7 @@ body {
 }
 
 .timer-container {
-    background: rgba(30, 30, 30, 0.85); /* 深灰半透明背景，與圖片對比 */
+    background: rgba(30, 30, 40, 0.95); /* 深灰半透明背景，與圖片對比 */
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* 深色陰影 */
@@ -23,7 +23,7 @@ body {
     max-width: 550px; /* 稍寬一點 */
     transition: all 0.3s ease;
     margin: 15px; /* 增加邊距 */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* 微白色邊框 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 微白色邊框 */
 }
 
 .mode-selector {
