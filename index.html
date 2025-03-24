@@ -3,190 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="title" data-lang-zh="計時器與碼表" data-lang-en="Timer & Stopwatch">計時器與碼表</title>
+    <title data-lang="title">Timer & Stopwatch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="timer-container">
         <div class="mode-selector">
-            <button class="mode-btn" data-mode="stopwatch" data-lang="stopwatch" data-lang-zh="碼表" data-lang-en="Stopwatch">碼表</button>
-            <button class="mode-btn active" data-mode="timer" data-lang="timer" data-lang-zh="計時器" data-lang-en="Timer">計時器</button>
+            <button class="mode-btn" data-mode="stopwatch" data-lang="stopwatch">Stopwatch</button>
+            <button class="mode-btn active" data-mode="timer" data-lang="timer">Timer</button>
         </div>
 
-        <h1 class="mode-title" data-lang="timer" data-lang-zh="計時器" data-lang-en="Timer">計時器</h1>
+        <h1 class="mode-title" data-lang="timer">Timer</h1>
 
         <div class="timer-settings">
-            <button class="duration-btn" data-duration="60000" data-lang="duration-1m" data-lang-zh="1 分鐘" data-lang-en="1 Minute">1 分鐘</button>
-            <button class="duration-btn" data-duration="300000" data-lang="duration-5m" data-lang-zh="5 分鐘" data-lang-en="5 Minutes">5 分鐘</button>
-            <button class="duration-btn" data-duration="600000" data-lang="duration-10m" data-lang-zh="10 分鐘" data-lang-en="10 Minutes">10 分鐘</button>
+            <button class="duration-btn" data-duration="60000" data-lang="duration-1m">1 Minute</button>
+            <button class="duration-btn" data-duration="300000" data-lang="duration-5m">5 Minutes</button>
+            <button class="duration-btn" data-duration="600000" data-lang="duration-10m">10 Minutes</button>
             <div class="custom-duration">
                 <select id="custom-hours">
-                    <option value="0" data-lang-zh="0 時" data-lang-en="0 hr">0 時</option>
-                    <option value="1" data-lang-zh="1 時" data-lang-en="1 hr">1 時</option>
-                    <option value="2" data-lang-zh="2 時" data-lang-en="2 hrs">2 時</option>
-                    <option value="3" data-lang-zh="3 時" data-lang-en="3 hrs">3 時</option>
-                    <option value="4" data-lang-zh="4 時" data-lang-en="4 hrs">4 時</option>
-                    <option value="5" data-lang-zh="5 時" data-lang-en="5 hrs">5 時</option>
-                    <option value="6" data-lang-zh="6 時" data-lang-en="6 hrs">6 時</option>
-                    <option value="7" data-lang-zh="7 時" data-lang-en="7 hrs">7 時</option>
-                    <option value="8" data-lang-zh="8 時" data-lang-en="8 hrs">8 時</option>
-                    <option value="9" data-lang-zh="9 時" data-lang-en="9 hrs">9 時</option>
-                    <option value="10" data-lang-zh="10 時" data-lang-en="10 hrs">10 時</option>
-                    <option value="11" data-lang-zh="11 時" data-lang-en="11 hrs">11 時</option>
-                    <option value="12" data-lang-zh="12 時" data-lang-en="12 hrs">12 時</option>
-                    <option value="13" data-lang-zh="13 時" data-lang-en="13 hrs">13 時</option>
-                    <option value="14" data-lang-zh="14 時" data-lang-en="14 hrs">14 時</option>
-                    <option value="15" data-lang-zh="15 時" data-lang-en="15 hrs">15 時</option>
-                    <option value="16" data-lang-zh="16 時" data-lang-en="16 hrs">16 時</option>
-                    <option value="17" data-lang-zh="17 時" data-lang-en="17 hrs">17 時</option>
-                    <option value="18" data-lang-zh="18 時" data-lang-en="18 hrs">18 時</option>
-                    <option value="19" data-lang-zh="19 時" data-lang-en="19 hrs">19 時</option>
-                    <option value="20" data-lang-zh="20 時" data-lang-en="20 hrs">20 時</option>
-                    <option value="21" data-lang-zh="21 時" data-lang-en="21 hrs">21 時</option>
-                    <option value="22" data-lang-zh="22 時" data-lang-en="22 hrs">22 時</option>
-                    <option value="23" data-lang-zh="23 時" data-lang-en="23 hrs">23 時</option>
+                    <option value="0">0 hr</option>
+                    <option value="1">1 hr</option>
+                    <option value="2">2 hrs</option>
+                    <option value="3">3 hrs</option>
+                    <option value="4">4 hrs</option>
+                    <option value="5">5 hrs</option>
+                    <option value="6">6 hrs</option>
+                    <option value="7">7 hrs</option>
+                    <option value="8">8 hrs</option>
+                    <option value="9">9 hrs</option>
+                    <option value="10">10 hrs</option>
+                    <option value="11">11 hrs</option>
+                    <option value="12">12 hrs</option>
+                    <option value="13">13 hrs</option>
+                    <option value="14">14 hrs</option>
+                    <option value="15">15 hrs</option>
+                    <option value="16">16 hrs</option>
+                    <option value="17">17 hrs</option>
+                    <option value="18">18 hrs</option>
+                    <option value="19">19 hrs</option>
+                    <option value="20">20 hrs</option>
+                    <option value="21">21 hrs</option>
+                    <option value="22">22 hrs</option>
+                    <option value="23">23 hrs</option>
                 </select>
                 <select id="custom-minutes">
-                    <option value="0" data-lang-zh="0 分" data-lang-en="0 min">0 分</option>
-                    <option value="1" data-lang-zh="1 分" data-lang-en="1 min">1 分</option>
-                    <option value="2" data-lang-zh="2 分" data-lang-en="2 mins">2 分</option>
-                    <option value="3" data-lang-zh="3 分" data-lang-en="3 mins">3 分</option>
-                    <option value="4" data-lang-zh="4 分" data-lang-en="4 mins">4 分</option>
-                    <option value="5" data-lang-zh="5 分" data-lang-en="5 mins">5 分</option>
-                    <option value="6" data-lang-zh="6 分" data-lang-en="6 mins">6 分</option>
-                    <option value="7" data-lang-zh="7 分" data-lang-en="7 mins">7 分</option>
-                    <option value="8" data-lang-zh="8 分" data-lang-en="8 mins">8 分</option>
-                    <option value="9" data-lang-zh="9 分" data-lang-en="9 mins">9 分</option>
-                    <option value="10" data-lang-zh="10 分" data-lang-en="10 mins">10 分</option>
-                    <option value="11" data-lang-zh="11 分" data-lang-en="11 mins">11 分</option>
-                    <option value="12" data-lang-zh="12 分" data-lang-en="12 mins">12 分</option>
-                    <option value="13" data-lang-zh="13 分" data-lang-en="13 mins">13 分</option>
-                    <option value="14" data-lang-zh="14 分" data-lang-en="14 mins">14 分</option>
-                    <option value="15" data-lang-zh="15 分" data-lang-en="15 mins">15 分</option>
-                    <option value="16" data-lang-zh="16 分" data-lang-en="16 mins">16 分</option>
-                    <option value="17" data-lang-zh="17 分" data-lang-en="17 mins">17 分</option>
-                    <option value="18" data-lang-zh="18 分" data-lang-en="18 mins">18 分</option>
-                    <option value="19" data-lang-zh="19 分" data-lang-en="19 mins">19 分</option>
-                    <option value="20" data-lang-zh="20 分" data-lang-en="20 mins">20 分</option>
-                    <option value="21" data-lang-zh="21 分" data-lang-en="21 mins">21 分</option>
-                    <option value="22" data-lang-zh="22 分" data-lang-en="22 mins">22 分</option>
-                    <option value="23" data-lang-zh="23 分" data-lang-en="23 mins">23 分</option>
-                    <option value="24" data-lang-zh="24 分" data-lang-en="24 mins">24 分</option>
-                    <option value="25" data-lang-zh="25 分" data-lang-en="25 mins">25 分</option>
-                    <option value="26" data-lang-zh="26 分" data-lang-en="26 mins">26 分</option>
-                    <option value="27" data-lang-zh="27 分" data-lang-en="27 mins">27 分</option>
-                    <option value="28" data-lang-zh="28 分" data-lang-en="28 mins">28 分</option>
-                    <option value="29" data-lang-zh="29 分" data-lang-en="29 mins">29 分</option>
-                    <option value="30" data-lang-zh="30 分" data-lang-en="30 mins">30 分</option>
-                    <option value="31" data-lang-zh="31 分" data-lang-en="31 mins">31 分</option>
-                    <option value="32" data-lang-zh="32 分" data-lang-en="32 mins">32 分</option>
-                    <option value="33" data-lang-zh="33 分" data-lang-en="33 mins">33 分</option>
-                    <option value="34" data-lang-zh="34 分" data-lang-en="34 mins">34 分</option>
-                    <option value="35" data-lang-zh="35 分" data-lang-en="35 mins">35 分</option>
-                    <option value="36" data-lang-zh="36 分" data-lang-en="36 mins">36 分</option>
-                    <option value="37" data-lang-zh="37 分" data-lang-en="37 mins">37 分</option>
-                    <option value="38" data-lang-zh="38 分" data-lang-en="38 mins">38 分</option>
-                    <option value="39" data-lang-zh="39 分" data-lang-en="39 mins">39 分</option>
-                    <option value="40" data-lang-zh="40 分" data-lang-en="40 mins">40 分</option>
-                    <option value="41" data-lang-zh="41 分" data-lang-en="41 mins">41 分</option>
-                    <option value="42" data-lang-zh="42 分" data-lang-en="42 mins">42 分</option>
-                    <option value="43" data-lang-zh="43 分" data-lang-en="43 mins">43 分</option>
-                    <option value="44" data-lang-zh="44 分" data-lang-en="44 mins">44 分</option>
-                    <option value="45" data-lang-zh="45 分" data-lang-en="45 mins">45 分</option>
-                    <option value="46" data-lang-zh="46 分" data-lang-en="46 mins">46 分</option>
-                    <option value="47" data-lang-zh="47 分" data-lang-en="47 mins">47 分</option>
-                    <option value="48" data-lang-zh="48 分" data-lang-en="48 mins">48 分</option>
-                    <option value="49" data-lang-zh="49 分" data-lang-en="49 mins">49 分</option>
-                    <option value="50" data-lang-zh="50 分" data-lang-enaa="50 mins">50 分</option>
-                    <option value="51" data-lang-zh="51 分" data-lang-en="51 mins">51 分</option>
-                    <option value="52" data-lang-zh="52 分" data-lang-en="52 mins">52 分</option>
-                    <option value="53" data-lang-zh="53 分" data-lang-en="53 mins">53 分</option>
-                    <option value="54" data-lang-zh="54 分" data-lang-en="54 mins">54 分</option>
-                    <option value="55" data-lang-zh="55 分" data-lang-en="55 mins">55 分</option>
-                    <option value="56" data-lang-zh="56 分" data-lang-en="56 mins">56 分</option>
-                    <option value="57" data-lang-zh="57 分" data-lang-en="57 mins">57 分</option>
-                    <option value="58" data-lang-zh="58 分" data-lang-en="58 mins">58 分</option>
-                    <option value="59" data-lang-zh="59 分" data-lang-en="59 mins">59 分</option>
-                    <option value="60" data-lang-zh="60 分" data-lang-en="60 mins">60 分</option>
+                    <option value="0">0 min</option>
+                    <option value="1">1 min</option>
+                    <option value="2">2 mins</option>
+                    <option value="3">3 mins</option>
+                    <option value="4">4 mins</option>
+                    <option value="5">5 mins</option>
+                    <option value="6">6 mins</option>
+                    <option value="7">7 mins</option>
+                    <option value="8">8 mins</option>
+                    <option value="9">9 mins</option>
+                    <option value="10">10 mins</option>
+                    <option value="11">11 mins</option>
+                    <option value="12">12 mins</option>
+                    <option value="13">13 mins</option>
+                    <option value="14">14 mins</option>
+                    <option value="15">15 mins</option>
+                    <option value="16">16 mins</option>
+                    <option value="17">17 mins</option>
+                    <option value="18">18 mins</option>
+                    <option value="19">19 mins</option>
+                    <option value="20">20 mins</option>
+                    <option value="21">21 mins</option>
+                    <option value="22">22 mins</option>
+                    <option value="23">23 mins</option>
+                    <option value="24">24 mins</option>
+                    <option value="25">25 mins</option>
+                    <option value="26">26 mins</option>
+                    <option value="27">27 mins</option>
+                    <option value="28">28 mins</option>
+                    <option value="29">29 mins</option>
+                    <option value="30">30 mins</option>
+                    <option value="31">31 mins</option>
+                    <option value="32">32 mins</option>
+                    <option value="33">33 mins</option>
+                    <option value="34">34 mins</option>
+                    <option value="35">35 mins</option>
+                    <option value="36">36 mins</option>
+                    <option value="37">37 mins</option>
+                    <option value="38">38 mins</option>
+                    <option value="39">39 mins</option>
+                    <option value="40">40 mins</option>
+                    <option value="41">41 mins</option>
+                    <option value="42">42 mins</option>
+                    <option value="43">43 mins</option>
+                    <option value="44">44 mins</option>
+                    <option value="45">45 mins</option>
+                    <option value="46">46 mins</option>
+                    <option value="47">47 mins</option>
+                    <option value="48">48 mins</option>
+                    <option value="49">49 mins</option>
+                    <option value="50">50 mins</option>
+                    <option value="51">51 mins</option>
+                    <option value="52">52 mins</option>
+                    <option value="53">53 mins</option>
+                    <option value="54">54 mins</option>
+                    <option value="55">55 mins</option>
+                    <option value="56">56 mins</option>
+                    <option value="57">57 mins</option>
+                    <option value="58">58 mins</option>
+                    <option value="59">59 mins</option>
+                    <option value="60">60 mins</option>
                 </select>
                 <select id="custom-seconds">
-                    <option value="0" data-lang-zh="0 秒" data-lang-en="0 sec">0 秒</option>
-                    <option value="1" data-lang-zh="1 秒" data-lang-en="1 sec">1 秒</option>
-                    <option value="2" data-lang-zh="2 秒" data-lang-en="2 secs">2 秒</option>
-                    <option value="3" data-lang-zh="3 秒" data-lang-en="3 secs">3 秒</option>
-                    <option value="4" data-lang-zh="4 秒" data-lang-en="4 secs">4 秒</option>
-                    <option value="5" data-lang-zh="5 秒" data-lang-en="5 secs">5 秒</option>
-                    <option value="6" data-lang-zh="6 秒" data-lang-en="6 secs">6 秒</option>
-                    <option value="7" data-lang-zh="7 秒" data-lang-en="7 secs">7 秒</option>
-                    <option value="8" data-lang-zh="8 秒" data-lang-en="8 secs">8 秒</option>
-                    <option value="9" data-lang-zh="9 秒" data-lang-en="9 secs">9 秒</option>
-                    <option value="10" data-lang-zh="10 秒" data-lang-en="10 secs">10 秒</option>
-                    <option value="11" data-lang-zh="11 秒" data-lang-en="11 secs">11 秒</option>
-                    <option value="12" data-lang-zh="12 秒" data-lang-en="12 secs">12 秒</option>
-                    <option value="13" data-lang-zh="13 秒" data-lang-en="13 secs">13 秒</option>
-                    <option value="14" data-lang-zh="14 秒" data-lang-en="14 secs">14 秒</option>
-                    <option value="15" data-lang-zh="15 秒" data-lang-en="15 secs">15 秒</option>
-                    <option value="16" data-lang-zh="16 秒" data-lang-en="16 secs">16 秒</option>
-                    <option value="17" data-lang-zh="17 秒" data-lang-en="17 secs">17 秒</option>
-                    <option value="18" data-lang-zh="18 秒" data-lang-en="18 secs">18 秒</option>
-                    <option value="19" data-lang-zh="19 秒" data-lang-en="19 secs">19 秒</option>
-                    <option value="20" data-lang-zh="20 秒" data-lang-en="20 secs">20 秒</option>
-                    <option value="21" data-lang-zh="21 秒" data-lang-en="21 secs">21 秒</option>
-                    <option value="22" data-lang-zh="22 秒" data-lang-en="22 secs">22 秒</option>
-                    <option value="23" data-lang-zh="23 秒" data-lang-en="23 secs">23 秒</option>
-                    <option value="24" data-lang-zh="24 秒" data-lang-en="24 secs">24 秒</option>
-                    <option value="25" data-lang-zh="25 秒" data-lang-en="25 secs">25 秒</option>
-                    <option value="26" data-lang-zh="26 秒" data-lang-en="26 secs">26 秒</option>
-                    <option value="27" data-lang-zh="27 秒" data-lang-en="27 secs">27 秒</option>
-                    <option value="28" data-lang-zh="28 秒" data-lang-en="28 secs">28 秒</option>
-                    <option value="29" data-lang-zh="29 秒" data-lang-en="29 secs">29 秒</option>
-                    <option value="30" data-lang-zh="30 秒" data-lang-en="30 secs">30 秒</option>
-                    <option value="31" data-lang-zh="31 秒" data-lang-en="31 secs">31 秒</option>
-                    <option value="32" data-lang-zh="32 秒" data-lang-en="32 secs">32 秒</option>
-                    <option value="33" data-lang-zh="33 秒" data-lang-en="33 secs">33 秒</option>
-                    <option value="34" data-lang-zh="34 秒" data-lang-en="34 secs">34 秒</option>
-                    <option value="35" data-lang-zh="35 秒" data-lang-en="35 secs">35 秒</option>
-                    <option value="36" data-lang-zh="36 秒" data-lang-en="36 secs">36 秒</option>
-                    <option value="37" data-lang-zh="37 秒" data-lang-en="37 secs">37 秒</option>
-                    <option value="38" data-lang-zh="38 秒" data-lang-en="38 secs">38 秒</option>
-                    <option value="39" data-lang-zh="39 秒" data-lang-en="39 secs">39 秒</option>
-                    <option value="40" data-lang-zh="40 秒" data-lang-en="40 secs">40 秒</option>
-                    <option value="41" data-lang-zh="41 秒" data-lang-en="41 secs">41 秒</option>
-                    <option value="42" data-lang-zh="42 秒" data-lang-en="42 secs">42 秒</option>
-                    <option value="43" data-lang-zh="43 秒" data-lang-en="43 secs">43 秒</option>
-                    <option value="44" data-lang-zh="44 秒" data-lang-en="44 secs">44 秒</option>
-                    <option value="45" data-lang-zh="45 秒" data-lang-en="45 secs">45 秒</option>
-                    <option value="46" data-lang-zh="46 秒" data-lang-en="46 secs">46 秒</option>
-                    <option value="47" data-lang-zh="47 秒" data-lang-en="47 secs">47 秒</option>
-                    <option value="48" data-lang-zh="48 秒" data-lang-en="48 secs">48 秒</option>
-                    <option value="49" data-lang-zh="49 秒" data-lang-en="49 secs">49 秒</option>
-                    <option value="50" data-lang-zh="50 秒" data-lang-en="50 secs">50 秒</option>
-                    <option value="51" data-lang-zh="51 秒" data-lang-en="51 secs">51 秒</option>
-                    <option value="52" data-lang-zh="52 秒" data-lang-en="52 secs">52 秒</option>
-                    <option value="53" data-lang-zh="53 秒" data-lang-en="53 secs">53 秒</option>
-                    <option value="54" data-lang-zh="54 秒" data-lang-en="54 secs">54 秒</option>
-                    <option value="55" data-lang-zh="55 秒" data-lang-en="55 secs">55 秒</option>
-                    <option value="56" data-lang-zh="56 秒" data-lang-en="56 secs">56 秒</option>
-                    <option value="57" data-lang-zh="57 秒" data-lang-en="57 secs">57 秒</option>
-                    <option value="58" data-lang-zh="58 秒" data-lang-en="58 secs">58 秒</option>
-                    <option value="59" data-lang-zh="59 秒" data-lang-en="59 secs">59 秒</option>
-                    <option value="60" data-lang-zh="60 秒" data-lang-en="60 secs">60 秒</option>
+                    <option value="0">0 sec</option>
+                    <option value="1">1 sec</option>
+                    <option value="2">2 secs</option>
+                    <option value="3">3 secs</option>
+                    <option value="4">4 secs</option>
+                    <option value="5">5 secs</option>
+                    <option value="6">6 secs</option>
+                    <option value="7">7 secs</option>
+                    <option value="8">8 secs</option>
+                    <option value="9">9 secs</option>
+                    <option value="10">10 secs</option>
+                    <option value="11">11 secs</option>
+                    <option value="12">12 secs</option>
+                    <option value="13">13 secs</option>
+                    <option value="14">14 secs</option>
+                    <option value="15">15 secs</option>
+                    <option value="16">16 secs</option>
+                    <option value="17">17 secs</option>
+                    <option value="18">18 secs</option>
+                    <option value="19">19 secs</option>
+                    <option value="20">20 secs</option>
+                    <option value="21">21 secs</option>
+                    <option value="22">22 secs</option>
+                    <option value="23">23 secs</option>
+                    <option value="24">24 secs</option>
+                    <option value="25">25 secs</option>
+                    <option value="26">26 secs</option>
+                    <option value="27">27 secs</option>
+                    <option value="28">28 secs</option>
+                    <option value="29">29 secs</option>
+                    <option value="30">30 secs</option>
+                    <option value="31">31 secs</option>
+                    <option value="32">32 secs</option>
+                    <option value="33">33 secs</option>
+                    <option value="34">34 secs</option>
+                    <option value="35">35 secs</option>
+                    <option value="36">36 secs</option>
+                    <option value="37">37 secs</option>
+                    <option value="38">38 secs</option>
+                    <option value="39">39 secs</option>
+                    <option value="40">40 secs</option>
+                    <option value="41">41 secs</option>
+                    <option value="42">42 secs</option>
+                    <option value="43">43 secs</option>
+                    <option value="44">44 secs</option>
+                    <option value="45">45 secs</option>
+                    <option value="46">46 secs</option>
+                    <option value="47">47 secs</option>
+                    <option value="48">48 secs</option>
+                    <option value="49">49 secs</option>
+                    <option value="50">50 secs</option>
+                    <option value="51">51 secs</option>
+                    <option value="52">52 secs</option>
+                    <option value="53">53 secs</option>
+                    <option value="54">54 secs</option>
+                    <option value="55">55 secs</option>
+                    <option value="56">56 secs</option>
+                    <option value="57">57 secs</option>
+                    <option value="58">58 secs</option>
+                    <option value="59">59 secs</option>
+                    <option value="60">60 secs</option>
                 </select>
-                <button class="set-custom-btn" data-lang="set" data-lang-zh="設定" data-lang-en="Set">設定</button>
+                <button class="set-custom-btn" data-lang="set">Set</button>
             </div>
         </div>
 
-        <div class="display">00:00.00</div>
+        <div class="display">00:00:00.00</div>
 
         <div class="buttons">
-            <button class="control-btn" data-action="start" data-lang="start" data-lang-zh="開始" data-lang-en="Start">開始</button>
-            <button class="control-btn" data-action="pause" data-lang="pause" data-lang-zh="暫停" data-lang-en="Pause" disabled>暫停</button>
-            <button class="control-btn" data-action="reset" data-lang="reset" data-lang-zh="重置" data-lang-en="Reset">重置</button>
-            <button class="control-btn" data-action="lap" data-lang="lap" data-lang-zh="分圈" data-lang-en="Lap" disabled>分圈</button>
+            <button class="control-btn" data-action="start" data-lang="start">Start</button>
+            <button class="control-btn" data-action="pause" data-lang="pause" disabled>Pause</button>
+            <button class="control-btn" data-action="reset" data-lang="reset">Reset</button>
+            <button class="control-btn" data-action="lap" data-lang="lap" disabled>Lap</button>
         </div>
 
         <div class="laps">
-            <h3 data-lang="laps" data-lang-zh="分圈時間" data-lang-en="Laps">分圈時間</h3>
+            <h3 data-lang="laps">Laps</h3>
             <div class="laps-list"></div>
         </div>
     </div>

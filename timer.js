@@ -15,57 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalId = null;
     let isRunning = false;
     let laps = [];
-    let currentLang = 'zh'; // 預設語言為中文
-
-    // 檢測瀏覽器語言
-    function detectLanguage() {
-        const lang = navigator.language || navigator.languages[0];
-        if (lang.startsWith('zh')) {
-            return 'zh'; // 中文
-        } else {
-            return 'en'; // 英文（或其他語言）
-        }
-    }
-
-    // 更新頁面語言
-    function updateLanguage() {
-        currentLang = detectLanguage();
-        const langKey = `data-lang-${currentLang}`;
-
-        // 更新標題
-        document.querySelector('title').textContent = document.querySelector('title').getAttribute(langKey);
-
-        // 更新所有帶 data-lang 的元素
-        document.querySelectorAll('[data-lang]').forEach(element => {
-            element.textContent = element.getAttribute(langKey);
-        });
-
-        // 更新 <select> 元素的選項
-        document.querySelectorAll('select option').forEach(option => {
-            option.textContent = option.getAttribute(langKey);
-        });
-    }
 
     // 初始化頁面
     function init() {
-        // 設置語言
-        updateLanguage();
-
         // 預設顯示計時器模式
         modeButtons.forEach(btn => btn.classList.remove('active'));
         document.querySelector('[data-mode="timer"]').classList.add('active');
         modeTitle.setAttribute('data-lang', 'timer');
-        modeTitle.textContent = document.querySelector('[data-mode="timer"]').getAttribute(`data-lang-${currentLang}`);
+        modeTitle.textContent = document.querySelector('[data-mode="timer"]').textContent;
         timerSettings.style.display = 'flex'; // 顯示計時器設定
         updateDisplay();
     }
 
-    // 格式化時間
+    // 格式化時間為 hh:mm:ss.毫秒
     function formatTime(ms) {
-        const minutes = Math.floor(ms / 60000);
-        const seconds = Math.floor((ms % 60000) / 1000);
-        const milliseconds = Math.floor((ms % 1000) / 10);
-        return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(2, '0')}`;
+        const hours = Math.floor(ms / 3600000); // 計算小時
+        const minutes = Math.floor((ms % 3600000) / 60000); // 計算分鐘
+        const seconds = Math.floor((ms % 60000) / 1000); // 計算秒
+        const milliseconds = Math.floor((ms % 1000) / 10); // 計算毫秒（兩位數）
+        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(2, '0')}`;
     }
 
     // 更新顯示
@@ -98,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modeButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             modeTitle.setAttribute('data-lang', currentMode);
-            modeTitle.textContent = button.getAttribute(`data-lang-${currentLang}`);
+            modeTitle.textContent = button.textContent;
 
             // 根據模式顯示或隱藏 timer-settings
             if (currentMode === 'timer') {
